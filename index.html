@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Подозрительная Сова</title>
+
+
+</head>
+
+<body class="body">
+
+  <div class="wrapper">
+    <div id="particles-js"></div>
+    <img src="images/cones/cone1.png" class="cone cone1">
+    <img src="images/cones/cone2.png" class="cone cone2">
+    <img src="images/cones/cone3.png" class="cone cone3">
+    <img src="images/cones/cone1.png" class="cone cone4">
+    <img src="images/cones/cone2.png" class="cone cone5">
+    <img src="images/cones/cone3.png" class="cone cone6">
+    <!-- ШАПКА САЙТА -->
+    <header>
+      <div class="container">
+        <div class="logo-wrap">
+          <img src="images/ddk.png" class="logo">
+          <img src="images/pzdsh.png" class="fog">
+
+        </div>
+        <h1>Подозрительная Сова</h1>
+        <button class="hamburger" onclick="showMenu(this)">
+          <img class="conedraw" src="images/cones/conedraw.svg">
+          <img class="conedraw" src="images/cones/conedraw.svg">
+        </button>
+
+
+
+
+        <div class="btns">
+          <button class="btn" onclick="navigation('.about')">О Сове</button>
+          <button class="btn" onclick="navigation('.video')">Смотреть</button>
+          <button class="btn" onclick="navigation('.gallery')">Галерея</button>
+        </div>
+
+      </div>
+    </header>
+    <!-- ИНФОРМАЦИОННЫЙ БЛОК -->
+    <section class="about">
+      <div class="container">
+        <img src="images/cf.png" class="about-image">
+        <div class="about-info">
+          <h2>Немного о Сове</h2>
+          <p>
+            О детстве известно мало. Лишь известно, что родился Сова от Сары Коннор и Совёнка, отправленного взрослым
+            Совой из будущего, дабы спасти маму от посланного Кроколлектором голого Арнольда Шварценеггера. В школе был
+            типичным "чмошником" - усердным в учебе, но из-за прыщей и брекетов не симпатичным внешне и не
+            пользовавшимся авторитетом у сверстников. Из-за этого, красавица Фламинго, в которую он влюбился еще в
+            первом классе, заявила, что ни за что не хочет с ним встречаться.
+          </p>
+          <button class="neon" onclick="showModal(this)">Весь доклад</button>
+        </div>
+
+      </div>
+    </section>
+    <!-- ВИДЕО БЛОК -->
+    <section class=" video">
+      <div class="container">
+        <h2>1 сезон 1 серия</h2>
+        <video controls src="videos/1s1s.mp4"></video>
+        <div class="hidden">
+          <h2>1 сезон 2 серия</h2>
+          <video controls src="videos/1s2s.mp4"></video>
+        </div>
+        <button class="btn" onmouseover="crazyButton(event)" onclick="showVideo(this)">Есть чё?</button>
+      </div>
+    </section>
+    <!-- ГАЛЕРЕЯ -->
+    <section class="gallery">
+      <div class="container swiper">
+        <h2>Нмншк фтгрфй</h2>
+        <div class="swiper-wrapper">
+          <img class="swiper-slide" src="images/chblt.png">
+          <img class="swiper-slide" src="images/chtpdzrtln.png">
+          <img class="swiper-slide" src="images/npntn.png">
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <div>
+          <span>
+            VerOnika Vs VladiK
+          </span>
+          <span class="date"></span>
+        </div>
+        <ul>
+          <li><button onclick="navigation('.about')">О Сове</button></li>
+          <li><button onclick="navigation('.video')">Смотреть</button></li>
+          <li><button onclick="navigation('.gallery')">Галерея</button></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+
+  <!-- MODAL -->
+  <div class="modal">
+    <div class="modal-inner">
+      <h3>Характер</h3>
+      <p>Сова - грубый и иногда суровый полицейский, но совмещает с этим любовь к шуткам и смешным костюмам даже в
+        неподходящих ситуациях. Курил шишки, но затем бросил, хотя эта привычка не мешала его работе. В целом
+        справедливый и добрый персонаж, но иногда проявляет излишнюю суровость и жестокость, в том числе и физическую.
+        Немного самолюбив и смел, готов биться с любым врагом даже без огнестрельного оружия. Иногда проявляет глупость,
+        что, опять же, не мешает операциям.</p>
+      <button class="neon" onclick="hideModal(this)">Закрыть</button>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
