@@ -174,10 +174,36 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
+const slider = document.getElementById('slider');
+
+noUiSlider
+  .create(slider, {
+    start: [0, 50],
+    // start: 0,
+    connect: true,
+    range: {
+      min: 0,
+      max: 100,
+    },
+    tooltips: true,
+    pips: {
+      mode: 'steps',
+      stepped: true,
+      density: 1,
+    },
+  })
+  .on('update', function (values) {
+    const elements = document.querySelectorAll('button, img');
+    elements.forEach(function (item) {
+      item.style.transform =
+        'rotate(' + values[0] * 500 + 'deg) scale(' + values[1] / 100 + ')';
+    });
+  });
+
 particlesJS('particles-js', {
   particles: {
     number: {
-      value: 30,
+      value: 90,
       density: {
         enable: true,
         value_area: 800,
