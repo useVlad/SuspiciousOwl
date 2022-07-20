@@ -19,6 +19,10 @@ body {
   overflow: hidden;
   transition: 300ms all ease-out;
 }
+* {
+  transition: 500ms all ease-out;
+  /* filter: grayscale(1); */
+}
 body * {
   z-index: 2;
 }
@@ -86,6 +90,7 @@ header.veryactive {
 
 .btns {
   transition: 300ms all ease-out;
+  display: flex;
 }
 .container {
   max-width: 1280px;

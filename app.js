@@ -13,6 +13,11 @@ function showModal(btn) {
   modal.classList.add('show');
 }
 
+function tlen() {
+  const all = document.querySelector('*');
+  all.style.filter = 'grayscale(1)';
+}
+
 //
 function hideModal(event) {
   const modal = document.querySelector('.modal');
