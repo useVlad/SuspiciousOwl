@@ -1,0 +1,25 @@
+#slider {
+  /* display: none; */
+  position: relative;
+  z-index: 99;
+}
+.noUi-target {
+  background: #5eff42;
+  border-color: #5eff42;
+}
+.noUi-connect {
+  background: #60e4ff;
+}
+.noUi-handle {
+  border-radius: 20px;
+}
+.noUi-horizontal .noUi-handle {
+  width: 28px;
+  height: 28px;
+}
+.noUi-handle:after {
+  left: 11px;
+}
+.noUi-horizontal {
+  /* height: 12px; */
+}

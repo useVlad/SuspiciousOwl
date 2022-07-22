@@ -190,12 +190,12 @@ noUiSlider
       min: 0,
       max: 100,
     },
-    tooltips: true,
-    pips: {
-      mode: 'steps',
-      stepped: true,
-      density: 1,
-    },
+    // tooltips: true,
+    // pips: {
+    //   mode: 'steps',
+    //   stepped: true,
+    //   density: 1,
+    // },
   })
   .on('update', function (values) {
     const elements = document.querySelectorAll('button, img');

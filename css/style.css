@@ -165,7 +165,7 @@ VIDEO
 .video .btn::before {
   content: '';
   display: block;
-  background-image: url('images/legs/left.svg');
+  background-image: url('../images/legs/left.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -182,7 +182,7 @@ VIDEO
 .video .btn::after {
   content: '';
   display: block;
-  background-image: url('images/legs/right.svg');
+  background-image: url('../images/legs/right.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -267,7 +267,7 @@ footer ul {
 .btn::before {
   content: '';
   display: block;
-  background-image: url('images/eyes/-0.svg');
+  background-image: url('../images/eyes/-0.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -280,13 +280,13 @@ footer ul {
   transition: 300ms all ease-out;
 }
 .btn:nth-child(1)::before {
-  background-image: url('images/eyes/-0.svg');
+  background-image: url('../images/eyes/-0.svg');
 }
 .btn:nth-child(2)::before {
-  background-image: url('images/eyes/--.svg');
+  background-image: url('../images/eyes/--.svg');
 }
 .btn:nth-child(3)::before {
-  background-image: url('images/eyes/00.svg');
+  background-image: url('../images/eyes/00.svg');
 }
 .btn:hover::before {
   transform: scale(1);
@@ -410,11 +410,7 @@ img:nth-child(odd):hover {
   height: 100%;
   z-index: 1;
 }
-#slider {
-  /* display: none; */
-  position: relative;
-  z-index: 99;
-}
+
 /*
 RESPONSIVE
 */
