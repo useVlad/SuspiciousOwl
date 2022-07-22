@@ -320,7 +320,7 @@ DECOR
 img {
   transition: 600ms all ease-out;
   transform: rotate(0deg) scale(1);
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 img:nth-child(even):hover {
   transform: rotate(45deg) scale(1.25);
