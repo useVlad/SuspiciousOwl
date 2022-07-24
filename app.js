@@ -13,17 +13,28 @@ function showModal(btn) {
   modal.classList.add('show');
 }
 
-function tlen() {
-  const all = document.querySelector('*');
-  all.style.filter = 'grayscale(1)';
-}
-
 //
 function hideModal(event) {
   const modal = document.querySelector('.modal');
   const wrapper = document.querySelector('.wrapper');
   wrapper.style.filter = 'none';
   modal.classList.remove('show');
+}
+
+function tlen(btn) {
+  //
+  const all = document.querySelector('*');
+
+  //
+  if (btn.classList.contains('grayscale')) {
+    btn.classList.remove('grayscale');
+    btn.innerText = 'Всё норм';
+    all.style.filter = 'grayscale(1)';
+  } else {
+    btn.classList.add('grayscale');
+    btn.innerText = 'Всё тлен';
+    all.style.filter = 'grayscale(0)';
+  }
 }
 
 //
@@ -183,7 +194,7 @@ const slider = document.getElementById('slider');
 
 noUiSlider
   .create(slider, {
-    start: [0, 50],
+    start: [0, 100],
     // start: 0,
     connect: true,
     range: {
