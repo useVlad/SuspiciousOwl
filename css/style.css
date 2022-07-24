@@ -31,11 +31,6 @@ h1 {
   font-size: 20px;
   transition: 300ms all linear;
 }
-h1:hover {
-  color: #3c3bab;
-  transform: none;
-  animation: skew 1s ease-out forwards;
-}
 p {
   font-size: 20px;
   transition: 300ms all linear;
@@ -53,17 +48,21 @@ header {
   left: 0;
   width: 100%;
   transition: 200ms all linear;
-  z-index: 6;
+  z-index: 9;
   font-family: 'Press Start 2P', cursive;
 }
-
+header:hover h1 {
+  color: #3c3bab;
+  transform: none;
+  animation: skew 1s ease-out forwards;
+}
 header.active {
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 20px rgba(0, 140, 255, 0.3);
   background-color: #ffffffaa;
 }
 
 header.veryactive {
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 20px rgba(0, 140, 255, 0.6);
   background-color: #ffffffee;
 }
 .logo {
@@ -134,7 +133,7 @@ ABOUT
   background: #028dff33;
 }
 .neon:hover {
-  color: rgb(67, 41, 159);
+  color: rgb(0, 7, 203);
   background-color: #028dff;
   filter: drop-shadow(0 0 20px #028dff) contrast(2) brightness(2);
 }
@@ -161,7 +160,7 @@ VIDEO
   transition: 500ms all ease-out;
 }
 .video .btn:hover {
-  box-shadow: 5px 10px 25px #a16751;
+  box-shadow: 5px 10px 25px #fe8c00cc;
 }
 .video .btn::before {
   content: '';
@@ -248,10 +247,29 @@ footer ul {
   list-style: none;
 }
 
+footer button {
+  all: unset;
+  margin: 10px;
+  color: #0300ad;
+  background-color: #2196f3;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-weight: bolder;
+  box-shadow: 0 5px 25px #2196f3;
+  cursor: pointer;
+  transition: 300ms all ease-out;
+}
+footer button:hover {
+  margin: 20px;
+  color: #ffffff;
+  background-color: #000044;
+  padding: 10px 15px;
+}
+
 .btn {
-  border: 1px red solid;
-  background: linear-gradient(orangered, orange, orangered);
-  box-shadow: 5px 5px 10px #94695a;
+  border: 1px #f83600 solid;
+  background: linear-gradient(#f83600, #fe8c00, #f83600);
+  box-shadow: 0 5px 10px #fe8c00cc;
   border-radius: 5px;
   margin: 10px;
   padding: 5px 15px;
@@ -263,7 +281,7 @@ footer ul {
 }
 .btn:hover {
   transform: scale(1.25);
-  box-shadow: 5px 10px 15px #94695a;
+  box-shadow: 0 10px 15px #fe8c0099;
 }
 .btn::before {
   content: '';
@@ -297,24 +315,6 @@ footer ul {
   transform: scale(1);
   height: 30px;
 }
-footer button {
-  all: unset;
-  margin: 10px;
-  color: #3c3bab;
-  background-color: #6262ff;
-  padding: 3px 10px;
-  font-weight: bolder;
-  box-shadow: 0 5px 25px #3d3bab;
-  cursor: pointer;
-  transition: 300ms all ease-out;
-}
-footer button:hover {
-  margin: 20px;
-  color: #686868;
-  background-color: #111120;
-  padding: 9px;
-}
-
 /*
 DECOR
 */
@@ -363,6 +363,23 @@ img:nth-child(odd):hover {
 
 .swiper {
   padding: 80px 30px;
+  position: relative;
+}
+.swiper::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
+}
+.swiper::after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
 }
 .modal {
   display: flex;
